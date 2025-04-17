@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class HolidayUtils {
-    // Данные по праздникам взяты из портала "Работа в Росии"
+    // Данные по праздникам взяты из портала "Работа в России"
     private static final Set<LocalDate> HOLIDAYS = new HashSet<>();
     static {
         int year = 2025;
@@ -21,7 +21,7 @@ public class HolidayUtils {
         // Рождество
         HOLIDAYS.add(LocalDate.of(year, 1, 7));
         // 23 февраля (перенос на 8 мая)
-        // Международный женский день (перенос на 13 июня)
+        // 8 марта (перенос на 13 июня)
         // 1 мая
         HOLIDAYS.add(LocalDate.of(year, 5, 1));
         // 2 мая (перенос с 4 января)
