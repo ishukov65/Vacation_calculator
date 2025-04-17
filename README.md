@@ -1,4 +1,4 @@
-# Vacation Calculator — подробный отчет и описание проекта
+# Vacation Calculator
 
 ## Описание проекта
 
