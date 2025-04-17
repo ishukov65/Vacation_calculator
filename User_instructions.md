@@ -32,8 +32,8 @@
 
 **Вариант 1. Через git:**
 ```sh
-git clone <URL_ВАШЕГО_РЕПОЗИТОРИЯ>
-cd <папка_проекта>
+git clone https://github.com/ishukov65/Vacation_calculator.git
+cd Vacation_calculator
 ```
 **Вариант 2. Скопировать файлы вручную:**
 Скачайте все файлы проекта в одну папку.
@@ -79,15 +79,15 @@ GET /calculate
    ```
 2. Расчет с учетом конкретных дат:
    ```
-   http://localhost:8080/calculate?averageSalary=60000&vacationDays=5&vacationDates=2025-04-14&vacationDates=2025-04-15
-   ```
-
-**Ответ:**
-```json
-{
-  "amount": 6825.60
-}
-```
+   http://localhost:8080/calculate?averageSalary=60000&vacationDays=14&vacationDates=2025-01-01&vacationDates=2025-01-04&vacationDates=2025-01-06&vacationDates=2025-01-07&vacationDates=2025-01-11&vacationDates=2025-01-12&vacationDates=2025-01-13&vacationDates=2025-01-14&vacationDates=2025-01-18&vacationDates=2025-01-19&vacationDates=2025-01-20&vacationDates=2025-01-21&vacationDates=2025-01-25&vacationDates=2025-01-27
+  ```
+- Если из 14 дат 5 — рабочие, расчет:
+  - Среднедневная: 170.65
+  - Отпускные: 170.65 × 5 = 853.25
+- Ответ:
+  ```json
+  { "amount": 853.25 }
+  ```
 
 ---
 
@@ -109,7 +109,7 @@ mvn test
 ## 7. Примечания
 
 - Праздники и выходные определяются в классе `HolidayUtils` (можно расширить список).
-- Все расчеты производятся по формуле:
+- Все расчеты производятся по формуле по ТК РФ:
   - среднедневная = averageSalary / 12 / 29.3
   - отпускные = среднедневная * количество оплачиваемых дней
 
